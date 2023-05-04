@@ -86,4 +86,4 @@ function str_len(str) {
 }
 let str_ = str_len("Brandon Atonte")
 
-console.log(str_
+console.log(str_)
