@@ -49,6 +49,8 @@ function Person(name, age) {
 
     return this
 }
+// NOTE: I couldn't use arrow key (=>) function because it doesn't work in protype cases becaused I tried countless times and when step by step with python tutor for javascript, 
+//so I used function() instead as below
 
 Person.prototype.printInfo = function() {
     console.log(this.name, this.age)
