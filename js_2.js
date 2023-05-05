@@ -25,15 +25,16 @@ function fav_food(obj) {
 }
 
 console.log(fav_food(person3))
-    //=======Exercise #2=========//
-    /*
-    Write an object prototype for a Person that has a name and age, has a
-    printInfo method, and also has a method that 
-    increments the persons age by 1 each time the method is called.
-    Create two people using the 'new' keyword, and print 
-    both of their infos and increment one persons
-    age by 3 years. Use an arrow function for both methods
-    */
+
+//=======Exercise #2=========//
+/*
+Write an object prototype for a Person that has a name and age, has a
+printInfo method, and also has a method that 
+increments the persons age by 1 each time the method is called.
+Create two people using the 'new' keyword, and print 
+both of their infos and increment one persons
+age by 3 years. Use an arrow function for both methods
+*/
 
 // Create our Person Prototype
 // Use an arrow to create the printInfo method
@@ -49,19 +50,19 @@ function Person(name, age) {
     return this
 }
 
-Person.prototype.printInfo = () => {
+Person.prototype.printInfo = function() {
     console.log(this.name, this.age)
 }
 
-Person.prototype.addAge = () => {
-    this.age += 1;
+Person.prototype.addAge = function(years) {
+    this.age += years;
     console.log(this.age)
 }
 
 
 let man = new Person("Brandon", 70)
 man.printInfo()
-man.addAge()
+man.addAge(3)
 console.log(man)
 
 
@@ -81,7 +82,7 @@ function str_len(str) {
             } else {
                 rej("Small Word")
             }
-        }, 3000)
+        }, 2000)
     })
 }
 let str_ = str_len("Brandon Atonte")
